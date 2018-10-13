@@ -1,0 +1,9 @@
+---
+papersize: a4
+fontsize: 12pt
+documentclass: article
+geometry: margin=1in
+bibliography: bibliography.bib
+csl: etc/mla8.csl
+indent: true
+---
