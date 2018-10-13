@@ -1,0 +1,7 @@
+---
+papersize: a4
+documentclass: article
+classoption: twocolumn
+geometry: margin=1in
+indent: true
+---

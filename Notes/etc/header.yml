@@ -1,8 +1,0 @@
----
-csl: etc/mla8.csl
-header-includes: |
-  \usepackage{siunitx}
-reference-section-title: Works Cited
----
-
-
