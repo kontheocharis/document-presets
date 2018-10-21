@@ -1,7 +1,8 @@
 ---
 papersize: a4
-documentclass: article
-classoption: twocolumn
-geometry: margin=1in
+documentclass: memoir
+numbersections: true
 indent: true
+toc: true
+secnumdepth: 2
 ---

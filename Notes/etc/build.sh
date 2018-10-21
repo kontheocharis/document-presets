@@ -12,7 +12,6 @@ fi
 
 pandoc $($LAYOUT) --pdf-engine=pdflatex \
        -t $OUT_FORMAT \
-       --include-in-header etc/header-includes.tex \
-       --include-in-header settings/header-includes.tex \
+       --include-in-header etc/header-includes.extras.tex \
        -o "out/$DIR_NAME.$EXT_FORMAT" \
        $FILTERS
