@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+
+% Setup paragraph spacing and locale
+% \usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage[english]{babel}
+\usepackage[en-GB]{datetime2}
+\DTMlangsetup[en-GB]{ord=omit}
+\usepackage[doublespacing]{setspace}
+\setlength{\parindent}{0.5in}
+
+% Math packages
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage{physics}
+
+% Better font
+\usepackage{lmodern}
+\usepackage{url}
+\urlstyle{tt}
+
+% Table package
+\usepackage{tabu, longtable}
+
+% Bibliography
+\usepackage[style=mla]{biblatex}
+\addbibresource{bibliography.bib}
+
+% Redefining title and head
+\usepackage{titling}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyheadoffset{0cm}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+\fancypagestyle{plain}{%
+    \fancyhf{}%
+    \fancyhead[R]{\thepage}%
+}  
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+  \maketitlehooka
+  {\@bspreauthor \@author \@bspostauthor}
+  \maketitlehookb
+  {\@bspredate \@date \@bspostdate}
+  \maketitlehookc
+  {\@bspretitle \@title \@bsposttitle}
+  \maketitlehookd
+  \par}
+\makeatother
+
+\pretitle{\begin{center}\LARGE}
+\posttitle{\end{center}}
+\preauthor{\noindent}
+\postauthor{}
+\predate{\\}
+\postdate{}
+
+\renewcommand{\and}{\\}
