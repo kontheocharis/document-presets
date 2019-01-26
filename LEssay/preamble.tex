@@ -10,10 +10,16 @@
 \usepackage[doublespacing]{setspace}
 \setlength{\parindent}{0.5in}
 
-% Math packages
+% Math/sci packages
 % \usepackage{amsmath}
 % \usepackage{amssymb}
 % \usepackage{physics}
+% \usepackage{mhchem}
+
+% Drawing & plots
+% \usepackage{tikz}
+% \usepackage{pgfplots}
+% \usepackage{pgfplotstable}
 
 % Better font
 \usepackage{lmodern}
@@ -24,12 +30,13 @@
 \usepackage{tabu, longtable}
 
 % Bibliography
-\usepackage[style=mla]{biblatex}
-\addbibresource{bibliography.bib}
+% \usepackage[style=mla]{biblatex}
+% \addbibresource{bibliography.bib}
 
 % Redefining title and head
 \usepackage{titling}
 \usepackage{fancyhdr}
+\usepackage{blindtext}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyheadoffset{0cm}
@@ -40,7 +47,6 @@
     \fancyhf{}%
     \fancyhead[R]{\thepage}%
 }  
-
 \makeatletter
 \def\@maketitle{%
   \newpage
@@ -53,12 +59,13 @@
   \maketitlehookd
   \par}
 \makeatother
-
 \pretitle{\begin{center}\LARGE}
 \posttitle{\end{center}}
 \preauthor{\noindent}
 \postauthor{}
 \predate{\\}
 \postdate{}
-
 \renewcommand{\and}{\\}
+
+% Question command
+\newcommand{\question}[2]{\subsubsection*{{#1}\hspace{1em}{#2}}}  
