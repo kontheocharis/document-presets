@@ -1,4 +1,4 @@
-# pandoc-presets
+# document-presets
 
 This repository contains presets that I use to make my life easier when dealing with pandoc.
 
