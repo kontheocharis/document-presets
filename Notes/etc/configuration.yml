@@ -1,8 +1,0 @@
----
-papersize: a4
-documentclass: memoir
-numbersections: true
-indent: true
-toc: true
-secnumdepth: 2
----
