@@ -2,14 +2,24 @@
 \usepackage[margin=1in]{geometry}
 
 % Setup paragraph spacing and locale
-% \usepackage[utf8]{inputenc}
-\usepackage{csquotes}
 \usepackage{microtype}
-\usepackage[english]{babel}
 \usepackage[en-GB]{datetime2}
 \DTMlangsetup[en-GB]{ord=omit}
+\usepackage[autostyle=true]{csquotes}
+\MakeOuterQuote{"}
 \usepackage[doublespacing]{setspace}
 \setlength{\parindent}{0.5in}
+
+% Better font
+\usepackage{lmodern}
+\usepackage{url}
+\urlstyle{tt}
+
+% Greek support
+% \usepackage[english,greek]{babel}
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{gfsartemisia}
 
 % Math/sci packages
 % \usepackage{amsmath}
@@ -21,18 +31,21 @@
 % \usepackage{tikz}
 % \usepackage{pgfplots}
 % \usepackage{pgfplotstable}
-
-% Better font
-\usepackage{lmodern}
-\usepackage{url}
-\urlstyle{tt}
-
-% Table package
-\usepackage{tabu, longtable}
+% \pgfplotsset{compat=newest}
+% \pgfkeys{/pgf/plot/gnuplot call={cd out && gnuplot}}
 
 % Bibliography
-% \usepackage[style=authoryear,urlstyle=long]{biblatex}
+% \usepackage[style=authoryear,citestyle=authoryear,urlstyle=long]{biblatex}
 % \addbibresource{bibliography.bib}
+
+% Table package
+\usepackage{tabu, longtable, booktabs}
+
+% Links
+\usepackage{hyperref}
+
+% texcount
+\newcommand\wordcount{\input|"texcount -inc main.tex | grep 'Words in text:' | tail -1 | cut -c 16-"}
 
 % Redefining title and head
 \usepackage{titling}
