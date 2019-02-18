@@ -1,5 +1,4 @@
 \documentclass[12pt,a4paper]{article}
-\usepackage[margin=1in]{geometry}
 
 % Setup paragraph spacing and locale
 \usepackage{microtype}
@@ -7,8 +6,8 @@
 \DTMlangsetup[en-GB]{ord=omit}
 \usepackage[autostyle=true]{csquotes}
 \MakeOuterQuote{"}
-\usepackage[doublespacing]{setspace}
-\setlength{\parindent}{0.5in}
+\usepackage{setspace}
+\onehalfspacing
 
 % Better font
 \usepackage{lmodern}
@@ -35,17 +34,20 @@
 % \pgfkeys{/pgf/plot/gnuplot call={cd out && gnuplot}}
 
 % Bibliography
-% \usepackage[style=authoryear,citestyle=authoryear,urlstyle=long]{biblatex}
+% \usepackage[style=authoryear,citestyle=authoryear]{biblatex}
 % \addbibresource{bibliography.bib}
 
 % Table package
-\usepackage{tabu, longtable, booktabs}
+% \usepackage{tabu, longtable, booktabs}
 
-% Links
-\usepackage{hyperref}
+% START: MLA-style document
 
-% texcount
-\newcommand\wordcount{\input|"texcount -inc main.tex | grep 'Words in text:' | tail -1 | cut -c 16-"}
+% Geometry
+\usepackage[margin=1in]{geometry}
+
+% Spacing
+\doublespacing
+\setlength{\parindent}{0.5in}
 
 % Redefining title and head
 \usepackage{titling}
@@ -81,5 +83,25 @@
 \postdate{}
 \renewcommand{\and}{\\}
 
+% END: MLA-style document
+
+% Various
+\usepackage{ifthen}
+
+% Links
+\usepackage{hyperref}
+
+% Custom commands:
+
 % Question command
-\newcommand{\question}[2]{\subsubsection*{{#1}\hspace{1em}{#2}}}  
+\newcommand{\question}[2][]{%
+    \ifthenelse{\equal{#1}{}}{%
+        \subsubsection*{#2}
+    }{%
+        \subsubsection*{{#1}\hspace{1em}{#2}}
+    }
+}  
+
+% texcount command
+\newcommand*{\wordcount}{\input|"texcount -inc main.tex | grep 'Words in text:' | tail -1 | cut -c 16-"\relax}
+
