@@ -1,30 +1,39 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[12pt,oneside,a4paper,article]{memoir}
 
-% Setup paragraph spacing and locale
-\usepackage{microtype}
+% Memoir options
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\DoubleSpacing
+
+% UTF-8
+\usepackage[utf8]{inputenc}
+
+% Setup date format
 \usepackage[en-GB]{datetime2}
 \DTMlangsetup[en-GB]{ord=omit}
+
+% Setup auto quotes
 \usepackage[autostyle=true]{csquotes}
 \MakeOuterQuote{"}
-\usepackage{setspace}
-\onehalfspacing
 
-% Better font
+% Font-related
+\usepackage{microtype}
 \usepackage{lmodern}
 \usepackage{url}
 \urlstyle{tt}
 
 % Greek support
 % \usepackage[english,greek]{babel}
-% \usepackage[utf8]{inputenc}
 % \usepackage[T1]{fontenc}
 % \usepackage{gfsartemisia}
 
 % Math/sci packages
+% \usepackage{exscale}
 % \usepackage{amsmath}
 % \usepackage{amssymb}
 % \usepackage{physics}
 % \usepackage{mhchem}
+% \usepackage{siunitx}
 
 % Drawing & plots
 % \usepackage{tikz}
@@ -38,70 +47,32 @@
 % \addbibresource{bibliography.bib}
 
 % Table package
-% \usepackage{tabu, longtable, booktabs}
+% \usepackage{tabularx, longtable, booktabs}
 
-% START: MLA-style document
+% Question command
+% \usepackage{ifthen}
+% \usepackage{titlesec}
+% \titleclass{\questionn}{straight}[\subsection]
+% \newcounter{questionn}
+% \renewcommand{\thequestionn}{\arabic{questionn}}
+% \titleformat{\questionn}{\normalfont\normalsize\bfseries}{\thequestionn}{1em}{}
+% \titlespacing*{\questionn}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% \newcommand{\question}[2][]{%
+%     \ifthenelse{\equal{#1}{}}{%
+%         \questionn*{#2}
+%     }{%
+%         \renewcommand{\thequestionn}{#1}
+%         \questionn{#2}
+%     }
+% }  
 
-% Geometry
-\usepackage[margin=1in]{geometry}
-
-% Spacing
-\doublespacing
-\setlength{\parindent}{0.5in}
-
-% Redefining title and head
-\usepackage{titling}
-\usepackage{fancyhdr}
+% Fake text
 \usepackage{blindtext}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyheadoffset{0cm}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\fancyhead[R]{\thepage}
-\fancypagestyle{plain}{%
-    \fancyhf{}%
-    \fancyhead[R]{\thepage}%
-}  
-\makeatletter
-\def\@maketitle{%
-  \newpage
-  \maketitlehooka
-  {\@bspreauthor \@author \@bspostauthor}
-  \maketitlehookb
-  {\@bspredate \@date \@bspostdate}
-  \maketitlehookc
-  {\@bspretitle \@title \@bsposttitle}
-  \maketitlehookd
-  \par}
-\makeatother
-\pretitle{\begin{center}\LARGE}
-\posttitle{\end{center}}
-\preauthor{\noindent}
-\postauthor{}
-\predate{\\}
-\postdate{}
-\renewcommand{\and}{\\}
-
-% END: MLA-style document
-
-% Various
-\usepackage{ifthen}
 
 % Links
 \usepackage{hyperref}
 
-% Custom commands:
-
-% Question command
-\newcommand{\question}[2][]{%
-    \ifthenelse{\equal{#1}{}}{%
-        \subsubsection*{#2}
-    }{%
-        \subsubsection*{{#1}\hspace{1em}{#2}}
-    }
-}  
-
 % texcount command
-\newcommand*{\wordcount}{\input|"texcount -inc main.tex | grep 'Words in text:' | tail -1 | cut -c 16-"\relax}
-
+\newcommand*{\wordcount}{%
+    \input|"texcount -inc main.tex | grep 'Words in text:' | tail -1 | cut -c 16-"\relax
+} 

@@ -1,21 +1,50 @@
-% Basic setup
-\documentclass[12pt,a4paper]{memoir}
+\documentclass[11pt,a4paper,twocolumn]{memoir}
 
-% Packages
+% Memoir options
+\setcounter{secnumdepth}{2}
+\renewcommand{\chaptername}{Topic}
+\setcolsepandrule{30pt}{0.3pt}
+
+% UTF-8
+\usepackage[utf8]{inputenc}
+
+% Setup date format
+\usepackage[en-GB]{datetime2}
+\DTMlangsetup[en-GB]{ord=omit}
+
+% Setup auto quotes
+\usepackage[autostyle=true]{csquotes}
+\MakeOuterQuote{"}
+
+% Font
+\usepackage{microtype}
+\usepackage{lmodern}
+\usepackage{url}
+\urlstyle{tt}
+
+% Notes
+\usepackage[ampersand]{easylist}
+
+% Math/sci packages
+% \usepackage{exscale}
 % \usepackage{amsmath}
 % \usepackage{amssymb}
-\usepackage{microtype}
 % \usepackage{physics}
-\usepackage{lmodern}
-\usepackage{tabu, longtable}
-\usepackage[utf8]{inputenc}
-\usepackage{csquotes}
-% \usepackage[english]{babel}
+% \usepackage{mhchem}
+% \usepackage{siunitx}
+
+% Drawing & plots
+% \usepackage{tikz}
+% \usepackage{pgfplots}
+% \usepackage{pgfplotstable}
+% \pgfplotsset{compat=newest}
+% \pgfkeys{/pgf/plot/gnuplot call={cd out && gnuplot}}
+
+% Table package
+% \usepackage{tabularx, longtable, booktabs}
+
+% Fake text
+\usepackage{blindtext}
+
+% Links
 \usepackage{hyperref}
-
-% Chapter-related
-\setcounter{secnumdepth}{2}
-\addto\captionsenglish{\renewcommand{\chaptername}{Topic}}
-
-% Other
-\global\tabulinesep = 5pt
