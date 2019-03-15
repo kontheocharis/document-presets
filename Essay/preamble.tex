@@ -1,10 +1,8 @@
-\documentclass[12pt,oneside,a4paper,article]{memoir}
+\documentclass[12pt,a4paper]{article}
 
-% Memoir options
-\counterwithout{section}{chapter}
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
-\OnehalfSpacing
+% General
+\usepackage[onehalfspacing]{setspace}
+\usepackage[nobottomtitles]{titlesec}
 
 % UTF-8
 \usepackage[utf8]{inputenc}
@@ -49,11 +47,10 @@
 % \addbibresource{bibliography.bib}
 
 % Table package
-% \usepackage{longtable}
+% \usepackage{booktabs, tabularx, longtable}
 
 % Question command
 % \usepackage{ifthen}
-% \usepackage{titlesec}
 % \titleclass{\questionn}{straight}[\subsection]
 % \newcounter{questionn}
 % \renewcommand{\thequestionn}{\arabic{questionn}}
