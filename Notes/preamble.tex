@@ -1,33 +1,31 @@
-\documentclass[11pt,a4paper,twocolumn]{memoir}
+\documentclass[9pt,a4paper,twocolumn]{book}
 
-% Memoir options
-\setcounter{secnumdepth}{2}
-\setcounter{tocdepth}{2}
-\renewcommand{\chaptername}{Topic}
-\setcolsepandrule{30pt}{0.3pt}
-
-% UTF-8
-\usepackage[utf8]{inputenc}
+% Titles & sections
+\usepackage[nobottomtitles*,raggedright]{titlesec}
+\usepackage{titling}
 
 % Setup date format
 \usepackage[en-GB]{datetime2}
 \DTMlangsetup[en-GB]{ord=omit}
 
 % Setup auto quotes
+\usepackage{babel}
 \usepackage[autostyle=true]{csquotes}
 \MakeOuterQuote{"}
 
 % Font
+\usepackage{lmodern,exscale}
 \usepackage{microtype}
-\usepackage{lmodern}
 \usepackage{url}
 \urlstyle{tt}
 
 % Notes
 \usepackage[ampersand]{easylist}
 
+% Remove paragraph indents
+\usepackage{parskip}
+
 % Math/sci packages
-% \usepackage{exscale}
 % \usepackage{amsmath}
 % \usepackage{amssymb}
 % \usepackage{physics}
@@ -42,7 +40,10 @@
 % \pgfkeys{/pgf/plot/gnuplot call={cd out && gnuplot}}
 
 % Table package
-% \usepackage{longtable}
+\usepackage{booktabs, tabularx}
+
+% Floating
+\usepackage{float}
 
 % Fake text
 \usepackage{blindtext}

@@ -1,20 +1,18 @@
 \input{preamble.tex}
 
-\title{Notes}
-
-\author{%
-    Subtitle \\
-    Name
-}
+\newcommand{\mytitle}{Subject}
+\newcommand{\mysubtitle}{Subtitle}
+\newcommand{\myauthor}{Author}
 
 \begin{document}
 \frontmatter
-\begin{titlingpage}
+\title{\mytitle \\[0.5em] \large \mysubtitle}
+\author{\myauthor}
+\date{\the\year}
 \maketitle
-\tableofcontents*
-\end{titlingpage}
+{\vspace*{\fill}\raggedright \copyright\ \the\year\ \myauthor.}
+\tableofcontents
 \mainmatter
-\twocolumn
 % Add after here
 
 \end{document}

@@ -1,12 +1,14 @@
 \input{preamble.tex}
 
-\title{Title}
-\author{%
-    Name \\
-    Subject
-}
+\newcommand{\mytitle}{Title}
+\newcommand{\myauthor}{Author}
+\newcommand{\myclass}{Class}
+\newcommand{\mydate}{\today}
 
 \begin{document}
+\title{\mytitle}
+\author{\myauthor \\ \myclass}
+\date{\mydate}
 \maketitle
 
 \input{body.tex}
