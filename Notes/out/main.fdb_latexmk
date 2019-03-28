@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1552979147 "main.tex" "out/main.pdf" "main" 1552979148
+["pdflatex"] 1552979892 "main.tex" "out/main.pdf" "main" 1552979893
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1550406775 2840 216e6e45ad352e2456e1149f28885bee ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1550406775 2327 9d6df24f9c4f7368395224341a95523a ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1550406775 3332 103109f5612ad95229751940c61aada0 ""
@@ -88,14 +88,14 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1550406775 33301 a3134070eacafb10b1f371612ce2650d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1552235306 3143261 4a4d189f5fb19528a6b2d5e5ddb60c7d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1550821381 7919196 bcb2914103aa90dcef413303738ef55f ""
-  "main.tex" 1552979144 386 14254eb6bf2666eb3a110cf8e52093bc ""
-  "out/main.aux" 1552979148 680 2ac1dd7800f926b0b596f03abe33f316 ""
-  "out/main.out" 1552979148 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "out/main.toc" 1552979148 19 1ad9512af789cea15a568a1b41ad0944 ""
+  "main.tex" 1552979851 369 cb458deac5c7ac1f1491a87cc4887fe8 ""
+  "out/main.aux" 1552979892 680 2ac1dd7800f926b0b596f03abe33f316 ""
+  "out/main.out" 1552979892 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "out/main.toc" 1552979892 19 1ad9512af789cea15a568a1b41ad0944 ""
   "preamble.tex" 1552979010 957 6fa775e60d54c0ad3853c3ea81af563f ""
   (generated)
-  "out/main.toc"
-  "out/main.pdf"
-  "out/main.out"
   "out/main.aux"
+  "out/main.pdf"
   "out/main.log"
+  "out/main.toc"
+  "out/main.out"
