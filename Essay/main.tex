@@ -6,9 +6,11 @@
 \newcommand{\mydate}{\today}
 
 \begin{document}
+% Creating the title
 \title{\mytitle}
 \author{\myauthor \\ \myclass}
 \date{\mydate}
+\hypersetup{pdftitle={\mytitle},pdfauthor={\myauthor},pdfsubject={\myclass}}
 \maketitle
 
 \input{body.tex}
