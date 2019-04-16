@@ -1,35 +1,37 @@
-\documentclass[12pt,a4paper]{article}
-\usepackage{geometry}
+\documentclass[12pt,a4paper,titlepage]{article}
 
 % Spacing & titles
 \usepackage[onehalfspacing]{setspace}
 \usepackage[nobottomtitles*]{titlesec}
-\usepackage{titling}
+% \usepackage{titling}
 
 % Setup date format
 \usepackage[en-GB]{datetime2}
 \DTMlangsetup[en-GB]{ord=omit}
 
 % Setup auto quotes
-\usepackage{babel}
+\usepackage[english]{babel}
 \usepackage[autostyle=true]{csquotes}
 \MakeOuterQuote{"}
 
 % Font-related
-\usepackage{lmodern,exscale}
 \usepackage{microtype}
 \usepackage{url}
 \urlstyle{tt}
 
+% Latin Modern:
+\usepackage{lmodern,exscale}
+
+% Charter:
+% \usepackage[charter]{mathdesign}
+
 % Math/sci packages
-% \usepackage{exscale}
-% \usepackage{amsmath}
-% \usepackage{amssymb}
+% \usepackage{amsmath,amssymb}
 % \usepackage{physics}
+% \usepackage{siunitx}
 % \usepackage{chemmacros}
 % \chemsetup{modules=all,formula=chemformula}
 % \pgfkeys{cf /.tip = {>}, left cf /.tip = {>[left]}, right cf /.tip = {>[right]}}
-% \usepackage{siunitx}
 
 % Drawing & plots
 % \usepackage{tikz}
@@ -47,19 +49,35 @@
 
 % Question command
 \usepackage{ifthen}
+\usepackage{xparse}
+\usepackage{xspace}
 \titleclass{\questionn}{straight}[\subsection]
 \newcounter{questionn}
+\newcommand{\questiontext}{}
 \renewcommand{\thequestionn}{\arabic{questionn}}
 \titleformat{\questionn}{\normalfont\normalsize\bfseries}{\thequestionn}{1em}{}
 \titlespacing*{\questionn}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-\newcommand{\question}[2][]{%
-    \ifthenelse{\equal{#1}{}}{%
-        \questionn*{#2}
+\newcommand\OnRight[1]{%
+  \unskip           % (1)
+  \hfill            % (2)
+  \penalty100\relax % (3)
+  \hspace*{0.5em}%    (4)
+  \hspace*{\fill}%    (5)
+  \mbox{#1}%          (6)
+}
+\NewDocumentCommand{\question}{O{}mO{}}{%
+    \ifthenelse{\equal{#3}{}}{%
+        \def\questionargs{#2}
     }{%
-        \renewcommand{\thequestionn}{#1}
-        \questionn{#2}
-    }
-}  
+        \def\questionargs{{#2} \OnRight{#3}}
+    }%
+    \ifthenelse{\equal{#1}{}}{%
+        \questionn*{\questionargs}
+    }{%
+        \renewcommand{\thequestionn}{\questiontext{#1}}
+        \questionn{\questionargs}
+    }%
+}
 
 % Floating
 \usepackage{float}
@@ -71,4 +89,4 @@
 \usepackage{hyperref}
 
 % texcount command
-\newcommand*{\wordcount}{\input|"texcount -inc main.tex | grep 'Words in text:' | tail -1 | cut -c 16-"\relax} 
+\newcommand*{\wordcount}{\input|"texcount -inc main.tex | grep 'Words in text:' | tail -1 | awk '{print $4}'"\relax} 
