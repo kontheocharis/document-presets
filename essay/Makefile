@@ -1,2 +1,0 @@
-runlatex: *
-	latexmk
