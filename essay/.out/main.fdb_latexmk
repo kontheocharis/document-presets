@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1565204876 "main.tex" ".out/main.pdf" "main" 1565205025
+["pdflatex"] 1565204876 "main.tex" ".out/main.pdf" "main" 1565205256
   ".out/main.aux" 1565204876 684 5e35fe93d3f1c383b570da46c6606ab3 "pdflatex"
   ".out/main.out" 1565204876 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "/dev/null" 1564922023 0 d41d8cd98f00b204e9800998ecf8427e ""
@@ -100,7 +100,7 @@
   "main.tex" 1563954345 473 cbef06906f4e7e6a9957ea3a982697a2 ""
   "preamble.tex" 1555451713 2307 84ee911ee7bee198faa7651b44c7a91b ""
   (generated)
-  ".out/main.aux"
+  ".out/main.log"
   ".out/main.out"
   ".out/main.pdf"
-  ".out/main.log"
+  ".out/main.aux"

@@ -89,7 +89,9 @@
 \usepackage{blindtext}
 
 % Links
+\usepackage{varioref}
 \usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
 
 % texcount command
 \newcommand*{\wordcount}{\input|"texcount -inc main.tex | grep 'Words in text:' | tail -1 | awk '{print $4}'"\relax} 
