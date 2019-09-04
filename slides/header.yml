@@ -1,0 +1,13 @@
+---
+title: Title
+subtitle: Subtitle
+author: 
+- Author
+- Subject
+revealjs-url: .
+server: yes
+
+socketio-secret: 
+socketio-id:
+socketio-url: https://reveal-js-multiplex-ccjbegmaii.now.sh
+---
