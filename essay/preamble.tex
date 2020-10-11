@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,titlepage]{article}
+\documentclass[11pt,a4paper,titlepage]{article}
 
 % Spacing & titles
 \usepackage[onehalfspacing]{setspace}
@@ -88,6 +88,10 @@
 
 \usepackage{caption}
 
+% Verbatim in footnotes
+\usepackage{bigfoot}
+\usepackage{cprotect}
+
 % Fake text
 \usepackage{blindtext}
 
@@ -95,6 +99,10 @@
 \usepackage{varioref}
 \usepackage{hyperref}
 \usepackage[capitalise]{cleveref}
+
+% Code
+\usepackage[outputdir=.out]{minted}
+\usemintedstyle{borland}
 
 % texcount command
 \newcommand*{\wordcount}{\input|"texcount -inc main.tex | grep 'Words in text:' | tail -1 | awk '{print $4}'"\relax} 

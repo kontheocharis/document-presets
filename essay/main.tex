@@ -1,17 +1,17 @@
 \input{preamble.tex}
 
-\newcommand{\mytitle}{Title}
-\newcommand{\mysubtitle}{Subtitle}
-\newcommand{\myauthor}{Author}
-\newcommand{\myclass}{Class}
-\newcommand{\mydate}{\today}
-
 \begin{document}
 % Creating the title
-\title{\mytitle\\\large\scshape\mysubtitle}
-\author{\myauthor \\ \myclass}
-\date{\mydate}
-\hypersetup{pdftitle={\mytitle: \mysubtitle},pdfauthor={\myauthor},pdfsubject={\myclass}}
+\title{Assignment: Title}
+\author{
+    \begin{tabular}{rl}
+        Class:& CSXXXX 2020/21 \\
+        Student no.:& 200018055 \\
+        Tutor:& X \\
+        % Words:& \wordcount{} \\
+    \end{tabular}
+}
+\date{\today}
 \maketitle
 
 \input{body.tex}
