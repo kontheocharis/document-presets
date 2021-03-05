@@ -20,10 +20,10 @@
 \usepackage{url}
 \urlstyle{tt}
 
-% Latin Modern:
+% Latin Modern
 \usepackage{lmodern,exscale}
 
-% Charter:
+% Charter
 % \usepackage[charter]{mathdesign}
 
 % Source Serif Pro
@@ -52,40 +52,50 @@
 % \usepackage{booktabs, tabularx}
 
 % Question command
-\usepackage{ifthen}
-\usepackage{xparse}
-\usepackage{xspace}
-\titleclass{\questionn}{straight}[\subsection]
-\newcounter{questionn}
-\newcommand{\questiontext}{}
-\renewcommand{\thequestionn}{\arabic{questionn}}
-\titleformat{\questionn}{\normalfont\normalsize\bfseries}{\thequestionn}{1em}{}
-\titlespacing*{\questionn}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-\newcommand\OnRight[1]{%
-  \unskip           % (1)
-  \hfill            % (2)
-  \penalty100\relax % (3)
-  \hspace*{0.5em}%    (4)
-  \hspace*{\fill}%    (5)
-  \mbox{#1}%          (6)
-}
-\NewDocumentCommand{\question}{O{}mO{}}{%
-    \ifthenelse{\equal{#3}{}}{%
-        \def\questionargs{#2}
-    }{%
-        \def\questionargs{{#2} \OnRight{#3}}
-    }%
-    \ifthenelse{\equal{#1}{}}{%
-        \questionn*{\questionargs}
-    }{%
-        \renewcommand{\thequestionn}{\questiontext{#1}}
-        \questionn{\questionargs}
-    }%
-}
+% \usepackage{ifthen}
+% \usepackage{xparse}
+% \usepackage{xspace}
+% \titleclass{\questionn}{straight}[\subsection]
+% \newcounter{questionn}
+% \newcommand{\questiontext}{}
+% \renewcommand{\thequestionn}{\arabic{questionn}}
+% \titleformat{\questionn}{\normalfont\normalsize\bfseries}{\thequestionn}{1em}{}
+% \titlespacing*{\questionn}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% \newcommand\OnRight[1]{%
+%   \unskip           % (1)
+%   \hfill            % (2)
+%   \penalty100\relax % (3)
+%   \hspace*{0.5em}%    (4)
+%   \hspace*{\fill}%    (5)
+%   \mbox{#1}%          (6)
+% }
+% \NewDocumentCommand{\question}{O{}mO{}}{%
+%     \ifthenelse{\equal{#3}{}}{%
+%         \def\questionargs{#2}
+%     }{%
+%         \def\questionargs{{#2} \OnRight{#3}}
+%     }%
+%     \ifthenelse{\equal{#1}{}}{%
+%         \questionn*{\questionargs}
+%     }{%
+%         \renewcommand{\thequestionn}{\questiontext{#1}}
+%         \questionn{\questionargs}
+%     }%
+% }
 
 % Floating
 \usepackage{float}
 
+% Prevent floats from jumping to other sections.
+\usepackage[section]{placeins}
+
+% Setting lengths
+% \usepackage{etoolbox}
+
+% Pagestyle with floats
+% \usepackage{floatpag}
+
+% Captions
 \usepackage{caption}
 
 % Verbatim in footnotes
