@@ -1,0 +1,85 @@
+\documentclass[11pt,a4paper]{article}
+
+% Spacing & titles
+\usepackage[onehalfspacing]{setspace}
+\usepackage[nobottomtitles*]{titlesec}
+\usepackage{authblk}
+% \usepackage{titling}
+% \usepackage{appendix}
+
+% Setup auto quotes
+\usepackage[english]{babel}
+\usepackage[autostyle=true]{csquotes}
+\MakeOuterQuote{"}
+
+% Setup date format
+\usepackage[en-GB]{datetime2}
+\DTMlangsetup[en-GB]{ord=omit}
+
+% Font-related
+\usepackage{microtype}
+\usepackage{url}
+\urlstyle{tt}
+
+% Latin Modern
+\usepackage{lmodern,exscale}
+
+% Charter
+% \usepackage[charter]{mathdesign}
+
+% Source Serif Pro
+% \usepackage{sourceserifpro}
+
+% Math/sci packages
+% \usepackage{amsmath,amssymb}
+% \usepackage{physics}
+% \usepackage{siunitx}
+% \pgfkeys{cf /.tip = {>}, left cf /.tip = {>[left]}, right cf /.tip = {>[right]}}
+
+% Drawing & plots
+% \usepackage{tikz}
+% \usepackage{pgfplots}
+% \usepackage{pgfplotstable}
+% \pgfplotsset{compat=newest}
+% \pgfkeys{/pgf/plot/gnuplot call={cd .out && gnuplot}}
+
+% Bibliography
+% \usepackage[style=authoryear,citestyle=authoryear]{biblatex}
+% \addbibresource{bibliography.bib}
+
+% Table package
+% \usepackage{booktabs, tabularx}
+
+% Floating
+\usepackage{float}
+
+% Prevent floats from jumping to other sections.
+\usepackage[section]{placeins}
+
+% Setting lengths
+% \usepackage{etoolbox}
+
+% Pagestyle with floats
+% \usepackage{floatpag}
+
+% Captions
+\usepackage{caption}
+
+% Verbatim in footnotes
+\usepackage{bigfoot}
+\usepackage{cprotect}
+
+% Fake text
+\usepackage{blindtext}
+
+% Links
+\usepackage{varioref}
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+
+% Code
+% \usepackage[outputdir=.out]{minted}
+% \usemintedstyle{borland}
+
+% texcount command
+\newcommand*{\wordcount}{\input|"texcount -inc main.tex | grep 'Words in text:' | tail -1 | awk '{print $4}'"\relax}
