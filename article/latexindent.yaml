@@ -1,7 +1,4 @@
 verbatimCommands:
   verb: 1
-  lstinline: 1
-  tc: 1
-  tx: 1
   mintinline: 1
   mint: 1
